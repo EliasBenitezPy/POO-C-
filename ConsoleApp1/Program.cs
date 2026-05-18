@@ -11,7 +11,8 @@ Console.WriteLine("Ingrese el color del vehiculo");
 string? colorIngresado = Console.ReadLine();
 
 Console.WriteLine("En que estado se encuentra el vehiculo?");
-string? estadoIngresado = Console.ReadLine();
+string? estadoIngresado = Console.ReadLine(); 
+
 
 var moto = new Moto(cilindradaIngresada, nrMotorIngresado,nrChapaIngresado, colorIngresado, estadoIngresado);
 public class Moto
