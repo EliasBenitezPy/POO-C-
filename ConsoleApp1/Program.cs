@@ -1,12 +1,11 @@
-﻿using System.Security.Principal;
-using DashboardApp;
+﻿using DashboardApp;
 
 int cilindrada;
 string? cilindradaEntrada;
 
 do
 {
-    Console.WriteLine("Ingrese la cilindrada del vehiculo.");
+    Console.WriteLine("Ingrese la cilindrada del vehículo.");
     cilindradaEntrada = Console.ReadLine();
 
     if (!int.TryParse(cilindradaEntrada, out cilindrada))
