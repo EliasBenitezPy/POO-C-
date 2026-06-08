@@ -1,8 +1,21 @@
 ﻿using System.Security.Principal;
 using DashboardApp;
 
-Console.WriteLine("Ingrese la cilindrada del vehiculo.");
-int cilindradaIngresada = int.Parse(Console.ReadLine());
+int cilindrada;
+string? cilindradaEntrada;
+
+do
+{
+    Console.WriteLine("Ingrese la cilindrada del vehiculo.");
+    cilindradaEntrada = Console.ReadLine();
+
+    if (!int.TryParse(cilindradaEntrada, out cilindrada))
+    {
+        Console.WriteLine("ERROR. Solo ingrese números enteros.");
+    }
+   
+}while(!int.TryParse(cilindradaEntrada, out cilindrada));
+
 
 Console.WriteLine("Ingrese el número de chasis.");
 string? nrChasis = Console.ReadLine();
@@ -20,5 +33,4 @@ Console.WriteLine("En que estado se encuentra el vehiculo?");
 string? estadoIngresado = Console.ReadLine(); 
 
 
-var moto = new Moto(cilindradaIngresada,nrChasis , nrMotorIngresado,nrChapaIngresado, colorIngresado, estadoIngresado);
-
+var moto = new Moto(cilindrada ,nrChasis , nrMotorIngresado,nrChapaIngresado, colorIngresado, estadoIngresado);
